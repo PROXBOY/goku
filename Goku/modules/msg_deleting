@@ -6,10 +6,10 @@ from telegram.error import BadRequest
 from telegram.ext import Filters, run_async
 from telegram.utils.helpers import mention_html
 
-from cinderella import dispatcher, LOGGER
-from cinderella.modules.disable import DisableAbleCommandHandler
-from cinderella.modules.helper_funcs.chat_status import user_admin, can_delete
-from cinderella.modules.log_channel import loggable
+from Goku import dispatcher, LOGGER
+from Goku.modules.disable import DisableAbleCommandHandler
+from Goku.modules.helper_funcs.chat_status import user_admin, can_delete
+from Goku.modules.log_channel import loggable
 
 
 @run_async
