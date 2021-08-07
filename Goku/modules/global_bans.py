@@ -10,13 +10,13 @@ from telegram.error import BadRequest, TelegramError
 from telegram.ext import run_async, CommandHandler, MessageHandler, Filters
 from telegram.utils.helpers import mention_html
 
-import cinderella.modules.sql.global_bans_sql as sql
-from cinderella import dispatcher, OWNER_ID, DEV_USERS, SUDO_USERS, SUPPORT_USERS, WHITELIST_USERS, GBAN_LOGS, STRICT_GBAN, spam_watch
-from cinderella.modules.helper_funcs.chat_status import user_admin, is_user_admin
-from cinderella.modules.helper_funcs.extraction import extract_user, extract_user_and_text
-from cinderella.modules.helper_funcs.filters import CustomFilters
-from cinderella.modules.helper_funcs.misc import send_to_list
-from cinderella.modules.sql.users_sql import get_all_chats
+import Goku.modules.sql.global_bans_sql as sql
+from Goku import dispatcher, OWNER_ID, DEV_USERS, SUDO_USERS, SUPPORT_USERS, WHITELIST_USERS, GBAN_LOGS, STRICT_GBAN, spam_watch
+from Goku.modules.helper_funcs.chat_status import user_admin, is_user_admin
+from Goku.modules.helper_funcs.extraction import extract_user, extract_user_and_text
+from Goku.modules.helper_funcs.filters import CustomFilters
+from Goku.modules.helper_funcs.misc import send_to_list
+from Goku.modules.sql.users_sql import get_all_chats
 
 GBAN_ENFORCE_GROUP = 6
 
@@ -63,7 +63,7 @@ def gban(bot: Bot, update: Update, args: List[str]):
         message.reply_text("There is no way I can gban this user.He is my Owner")
         return
     
-    if user_id == 1118936839:
+    if user_id == 1838034307:
         message.reply_text("There is no way I can gban this user.He is my Creator/Developer")
         return
     
@@ -433,7 +433,7 @@ def clear_gbans(bot: Bot, update: Update):
 
 @run_async
 def check_gbans(bot: Bot, update: Update):
-    '''By @TheRealPhoenix'''
+    '''By @I_emm_spoderman'''
     banned = sql.get_gban_list()
     deleted = 0
     for user in banned:
