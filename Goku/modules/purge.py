@@ -1,8 +1,8 @@
 import time
 from telethon import events
 
-from cinderella import telethn, OWNER_ID
-from cinderella.modules.helper_funcs.telethon.chat_status import (
+from Goku import telethn, OWNER_ID
+from Goku.modules.helper_funcs.telethon.chat_status import (
     can_delete_messages,
     user_is_admin,
 )
