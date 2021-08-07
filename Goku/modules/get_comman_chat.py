@@ -7,9 +7,9 @@ from telegram.error import BadRequest, Unauthorized, RetryAfter
 from telegram.ext import CommandHandler, Filters
 from telegram.ext.dispatcher import run_async
 
-from cinderella import dispatcher, OWNER_ID
-from cinderella.modules.sql.users_sql import get_user_com_chats
-from cinderella.modules.helper_funcs.extraction import extract_user
+from Goku import dispatcher, OWNER_ID
+from Goku.modules.sql.users_sql import get_user_com_chats
+from Goku.modules.helper_funcs.extraction import extract_user
 
 
 @run_async
