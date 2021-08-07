@@ -3,8 +3,8 @@ import threading
 
 from sqlalchemy import Column, String, Boolean, UnicodeText, Integer, func, distinct
 
-from cinderella.modules.helper_funcs.msg_types import Types
-from cinderella.modules.sql import SESSION, BASE
+from Goku.modules.helper_funcs.msg_types import Types
+from Goku.modules.sql import SESSION, BASE
 
 
 class Notes(BASE):
