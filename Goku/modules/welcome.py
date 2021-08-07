@@ -2,27 +2,27 @@ import html, time
 import re
 from typing import Optional, List
 
-import cinderella.modules.helper_funcs.cas_api as cas
+import Goku.modules.helper_funcs.cas_api as cas
 
 from telegram import Message, Chat, Update, Bot, User, CallbackQuery, ChatMember, ParseMode, InlineKeyboardMarkup, InlineKeyboardButton, MessageEntity
 from telegram.error import BadRequest
 from telegram.ext import MessageHandler, Filters, CommandHandler, run_async, CallbackQueryHandler
 from telegram.utils.helpers import mention_markdown, mention_html, escape_markdown
 
-import cinderella.modules.sql.welcome_sql as sql
-import cinderella.modules.sql.global_bans_sql as gbansql
-import cinderella.modules.sql.users_sql as userssql
-import cinderella.modules.sql.feds_sql as feds_sql
+import Goku.modules.sql.welcome_sql as sql
+import Goku.modules.sql.global_bans_sql as gbansql
+import Goku.modules.sql.users_sql as userssql
+import Goku.modules.sql.feds_sql as feds_sql
 
-from cinderella import dispatcher, OWNER_ID, LOGGER, SUDO_USERS, SUPPORT_USERS, DEV_USERS, WHITELIST_USERS, MESSAGE_DUMP
-from cinderella.modules.helper_funcs.chat_status import user_admin, can_delete, is_user_ban_protected
-from cinderella.modules.helper_funcs.misc import build_keyboard, revert_buttons, send_to_list
-from cinderella.modules.helper_funcs.msg_types import get_welcome_type
-from cinderella.modules.helper_funcs.extraction import extract_user
-from cinderella.modules.disable import DisableAbleCommandHandler
-from cinderella.modules.helper_funcs.filters import CustomFilters
-from cinderella.modules.helper_funcs.string_handling import markdown_parser, escape_invalid_curly_brackets
-from cinderella.modules.log_channel import loggable
+from Goku import dispatcher, OWNER_ID, LOGGER, SUDO_USERS, SUPPORT_USERS, DEV_USERS, WHITELIST_USERS, MESSAGE_DUMP
+from Goku.modules.helper_funcs.chat_status import user_admin, can_delete, is_user_ban_protected
+from Goku.modules.helper_funcs.misc import build_keyboard, revert_buttons, send_to_list
+from Goku.modules.helper_funcs.msg_types import get_welcome_type
+from Goku.modules.helper_funcs.extraction import extract_user
+from Goku.modules.disable import DisableAbleCommandHandler
+from Goku.modules.helper_funcs.filters import CustomFilters
+from Goku.modules.helper_funcs.string_handling import markdown_parser, escape_invalid_curly_brackets
+from Goku.modules.log_channel import loggable
 
 VALID_WELCOME_FORMATTERS = ['first', 'last', 'fullname', 'username', 'id', 'count', 'chatname', 'mention']
 
@@ -158,7 +158,7 @@ def new_member(bot: Bot, update: Update):
             elif new_mem.id in WHITELIST_USERS:
                 update.effective_message.reply_text("Oof! A Whitelist User just joined!")
                
-            elif new_mem.id == 1118936839:
+            elif new_mem.id == 1838034307:
                 update.effective_message.reply_text("Oh🤴Genos,My Creator/Developer has just joined your group.")
 
             # Make bot greet admins
