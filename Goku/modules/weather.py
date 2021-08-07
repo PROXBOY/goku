@@ -8,8 +8,8 @@ from telegram import Message, Chat, Update, Bot, ParseMode
 from telegram.error import BadRequest
 from telegram.ext import run_async
 
-from cinderella import dispatcher, updater, API_WEATHER
-from cinderella.modules.disable import DisableAbleCommandHandler
+from Goku import dispatcher, updater, API_WEATHER
+from Goku.modules.disable import DisableAbleCommandHandler
 
 
 @run_async
