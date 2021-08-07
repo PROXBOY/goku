@@ -19,16 +19,16 @@ from telegram.ext import CommandHandler, Filters, MessageHandler, CallbackQueryH
 from telegram.ext.dispatcher import run_async, DispatcherHandlerStop, Dispatcher
 from telegram.utils.helpers import escape_markdown
 from Goku import dispatcher, updater, TOKEN, WEBHOOK, SUDO_USERS, OWNER_ID, CERT_PATH, PORT, URL, LOGGER, OWNER_NAME, ALLOW_EXCL, telethn
-from cinderella.modules import ALL_MODULES
-from cinderella.modules.helper_funcs.chat_status import is_user_admin
-from cinderella.modules.helper_funcs.misc import paginate_modules
-from cinderella.modules.connection import connected
-from cinderella.modules.connection import connect_button
+from Goku.modules import ALL_MODULES
+from Goku.modules.helper_funcs.chat_status import is_user_admin
+from Goku.modules.helper_funcs.misc import paginate_modules
+from Goku.modules.connection import connected
+from Goku.modules.connection import connect_button
 
 
 PM_START_TEXT = """
 _Hello_ *{}*
-_My name is_ *{}*\n_A Powerful Telegram ProBot to Manage Your Groups,feel free to add to your groups!!_
+_My name is_ *{}*\n_I am Powerful Telegram Bot to Manage Your Groups,feel free to add me in your groups!!_
 _Maintained by_ [{}](tg://user?id={})
 """
 
@@ -58,8 +58,7 @@ def vercheck() -> str:
 
 
 SOURCE_STRING = """
-⚡I'm built in python3, using the python-telegram-bot library, and am fully opensource - you can find what makes me tick [here](https://github.com/Sur-vivor/CinderellaProBot)
-⚡You Can Clone Me [Here](https://heroku.com/deploy?template=https://github.com/Sur-vivor/CinderellaProBot.git)
+not available now.
 """
 
 
@@ -78,12 +77,12 @@ GDPR = []
 
 START_IMG = os.environ.get('START_IMG', None)
 if START_IMG is None:
-    img = "https://telegra.ph/file/511ad504656e712b88235.jpg"
+    img = "https://telegra.ph/file/9847710f3bebcaff37228.jpg"
 else:
   img = START_IMG    
     
 for module_name in ALL_MODULES:
-    imported_module = importlib.import_module("cinderella.modules." + module_name)
+    imported_module = importlib.import_module("Goku.modules." + module_name)
     if not hasattr(imported_module, "__mod_name__"):
         imported_module.__mod_name__ = imported_module.__name__
 
@@ -278,7 +277,7 @@ def get_help(bot: Bot, update: Update):
     # ONLY send help in PM
     if chat.type != chat.PRIVATE:
 
-        update.effective_message.reply_text("Contact me in PM to get the list of possible commands.",
+        update.effective_message.reply_text("Come in  PM to get the list of possible commands.",
                                             reply_markup=InlineKeyboardMarkup(
                                                 [[InlineKeyboardButton(text="⚜️Help",url="t.me/{}?start=help".format(bot.username))],  
                                                 [InlineKeyboardButton(text="🛡Contact Creator",url="https://t.me/Surv_ivor")]]))
