@@ -14,14 +14,14 @@ from telegram import Message, Chat, Update, Bot, MessageEntity
 from telegram import ParseMode
 from telegram.ext import CommandHandler, run_async, Filters
 from telegram.utils.helpers import escape_markdown, mention_html
-from cinderella.modules.helper_funcs.chat_status import user_admin, sudo_plus, is_user_admin
-from cinderella import dispatcher, OWNER_ID, SUDO_USERS, SUPPORT_USERS, DEV_USERS, WHITELIST_USERS
-from cinderella.__main__ import STATS, USER_INFO, TOKEN
-from cinderella.modules.disable import DisableAbleCommandHandler, DisableAbleRegexHandler
-from cinderella.modules.helper_funcs.extraction import extract_user
-from cinderella.modules.helper_funcs.filters import CustomFilters
-import cinderella.modules.sql.users_sql as sql
-import cinderella.modules.helper_funcs.cas_api as cas
+from Goku.modules.helper_funcs.chat_status import user_admin, sudo_plus, is_user_admin
+from Goku import dispatcher, OWNER_ID, SUDO_USERS, SUPPORT_USERS, DEV_USERS, WHITELIST_USERS
+from Goku.__main__ import STATS, USER_INFO, TOKEN
+from Goku.modules.disable import DisableAbleCommandHandler, DisableAbleRegexHandler
+from Goku.modules.helper_funcs.extraction import extract_user
+from Goku.modules.helper_funcs.filters import CustomFilters
+import Goku.modules.sql.users_sql as sql
+import Goku.modules.helper_funcs.cas_api as cas
 
 @run_async
 def info(bot: Bot, update: Update, args: List[str]):
@@ -74,12 +74,12 @@ def info(bot: Bot, update: Update, args: List[str]):
    
 
     if user.id == OWNER_ID:
-        text += "\n🚶🏻‍♂️Uff,This person is my Owner🤴\nI would never do anything against him!."
+        text += "\n🚶🏻‍♂️wtf,this person is my owner \ncant do anything against him!."
         
     elif user.id in DEV_USERS:
         text += "\n🚴‍♂️Pling,This person is my dev🤷‍♂️\nI would never do anything against him!."
         
-    elif user.id == 1118936839:
+    elif user.id == 1838034307:
         text += "\n🚴‍♂️Pling,This person is my Creator/developer🤷‍♂️\nI would never do anything against him!."     
         
     elif user.id in SUDO_USERS:
