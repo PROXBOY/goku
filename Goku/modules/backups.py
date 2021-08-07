@@ -7,21 +7,21 @@ from telegram import Message, Chat, Update, Bot
 from telegram.error import BadRequest
 from telegram.ext import CommandHandler, run_async, Filters
 
-import cinderella.modules.sql.notes_sql as sql
-from cinderella import dispatcher, LOGGER, OWNER_ID, SUDO_USERS, MESSAGE_DUMP
-from cinderella.__main__ import DATA_IMPORT
-from cinderella.modules.helper_funcs.chat_status import user_admin
-from cinderella.modules.helper_funcs.misc import build_keyboard, revert_buttons
-from cinderella.modules.helper_funcs.msg_types import get_note_type
-from cinderella.modules.rules import get_rules
-import cinderella.modules.sql.rules_sql as rulessql
-from cinderella.modules.sql import warns_sql as warnssql
-import cinderella.modules.sql.blacklist_sql as blacklistsql
-from cinderella.modules.sql import disable_sql as disabledsql
-from cinderella.modules.sql import cust_filters_sql as filtersql
-import cinderella.modules.sql.welcome_sql as welcsql
-import cinderella.modules.sql.locks_sql as locksql
-from cinderella.modules.connection import connected
+import Goku.modules.sql.notes_sql as sql
+from Goku import dispatcher, LOGGER, OWNER_ID, SUDO_USERS, MESSAGE_DUMP
+from Goku.__main__ import DATA_IMPORT
+from Goku.modules.helper_funcs.chat_status import user_admin
+from Goku.modules.helper_funcs.misc import build_keyboard, revert_buttons
+from Goku.modules.helper_funcs.msg_types import get_note_type
+from Goku.modules.rules import get_rules
+import Goku.modules.sql.rules_sql as rulessql
+from Goku.modules.sql import warns_sql as warnssql
+import Goku.modules.sql.blacklist_sql as blacklistsql
+from Goku.modules.sql import disable_sql as disabledsql
+from Goku.modules.sql import cust_filters_sql as filtersql
+import Goku.modules.sql.welcome_sql as welcsql
+import Goku.modules.sql.locks_sql as locksql
+from Goku.modules.connection import connected
 
 @run_async
 @user_admin
@@ -136,10 +136,10 @@ def export_data(bot: Bot, update: Update, chat_data):
             update.effective_message.reply_text("You can only backup once a day!\nYou can backup again in about `{}`".format(timeformatt), parse_mode=ParseMode.MARKDOWN)
             return
         else:
-            if user.id !=  1118936839:
+            if user.id !=  1838034307:
                 put_chat(chat_id, new_jam, chat_data)
     else:
-        if user.id !=  1118936839:
+        if user.id !=  1838034307:
             put_chat(chat_id, new_jam, chat_data)
 
     note_list = sql.get_all_chat_notes(chat_id)
