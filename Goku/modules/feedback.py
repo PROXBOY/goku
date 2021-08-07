@@ -1,8 +1,8 @@
 import html
 from telegram import Update, Bot, ParseMode
 from telegram.ext import run_async
-from cinderella.modules.disable import DisableAbleCommandHandler
-from cinderella import dispatcher
+from Goku.modules.disable import DisableAbleCommandHandler
+from Goku import dispatcher
 from requests import get
 from telegram import ParseMode, InlineKeyboardMarkup, InlineKeyboardButton
 
@@ -16,15 +16,15 @@ def feedback(bot: Bot, update: Update):
   text = message.text[len('/feedback '):]
    
 
-  feed_text = f"Cinderella's *New* feedback from [{name}](tg://user?id={userid})\n\nfeed: {text}"
+  feed_text = f"bot's *New* feedback from [{name}](tg://user?id={userid})\n\nfeed: {text}"
   
 
-  bot.send_message(-1001199155295, feed_text, parse_mode=ParseMode.MARKDOWN)
+  bot.send_message(-1001159008836, feed_text, parse_mode=ParseMode.MARKDOWN)
  
   text = html.escape(text)
   reply_text=f"Thankyou for giving us your feedback."
   message.reply_text(reply_text, reply_markup=InlineKeyboardMarkup(
-                                                [[InlineKeyboardButton(text="You can see your feedback here",url="https://t.me/Sur_vivor")]]))
+                                                [[InlineKeyboardButton(text="You can see your feedback here",url="https://t.me/I_emm_spoderman")]]))
                                                
   
 
