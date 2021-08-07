@@ -8,9 +8,9 @@ from coffeehouse.exception import CoffeeHouseError as CFError
 from telegram import Message, Chat, User, Update, Bot
 from telegram.ext import CommandHandler, MessageHandler, Filters, run_async
 
-from cinderella import dispatcher, LYDIA_API, OWNER_ID
-import cinderella.modules.sql.lydia_sql as sql
-from cinderella.modules.helper_funcs.filters import CustomFilters
+from Goku import dispatcher, LYDIA_API, OWNER_ID
+import Goku.modules.sql.lydia_sql as sql
+from Goku.modules.helper_funcs.filters import CustomFilters
 
 
 CoffeeHouseAPI = API(LYDIA_API)
