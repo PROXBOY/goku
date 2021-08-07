@@ -5,9 +5,9 @@ from feedparser import parse
 from telegram import ParseMode, constants
 from telegram.ext import CommandHandler
 
-from cinderella import dispatcher, updater
-from cinderella.modules.helper_funcs.chat_status import user_admin
-from cinderella.modules.sql import rss_sql as sql
+from Goku import dispatcher, updater
+from Goku.modules.helper_funcs.chat_status import user_admin
+from Goku.modules.sql import rss_sql as sql
 
 
 def show_url(bot, update, args):
