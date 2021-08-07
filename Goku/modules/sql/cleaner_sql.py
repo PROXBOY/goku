@@ -2,7 +2,7 @@ import threading
 
 from sqlalchemy import Column, String, UnicodeText, Boolean
 
-from cinderella.modules.sql import BASE, SESSION
+from Goku.modules.sql import BASE, SESSION
 
 
 class CleanerBlueTextChatSettings(BASE):
