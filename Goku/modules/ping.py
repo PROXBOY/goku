@@ -13,8 +13,8 @@ from telegram.ext import CommandHandler, run_async, Filters
 from telegram import Update, Bot
 from telegram.ext import run_async
 
-from cinderella.modules.disable import DisableAbleCommandHandler
-from cinderella import dispatcher, StartTime
+from Goku.modules.disable import DisableAbleCommandHandler
+from Goku import dispatcher, StartTime
 
 from requests import get
 
