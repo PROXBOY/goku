@@ -1,12 +1,12 @@
 import os
 
-from cinderella.modules.sql_extended.night_mode_sql import add_nightmode, rmnightmode, get_all_chat_id, is_nightmode_indb
+from Goku.modules.sql_extended.night_mode_sql import add_nightmode, rmnightmode, get_all_chat_id, is_nightmode_indb
 from telethon.tl.types import ChatBannedRights
 from apscheduler.schedulers.asyncio import AsyncIOScheduler 
 from telethon import functions
-from cinderella.events import register
-from cinderella import OWNER_ID
-from cinderella import telethn as tbot
+from Goku.events import register
+from Goku import OWNER_ID
+from Goku import telethn as tbot
 from telethon import *
 from telethon import Button, custom, events
 
@@ -169,8 +169,8 @@ scheduler.start()
 
 __help__ = """
  ❍ /nightmode on/off
-**Note:** Night Mode chats get Automatically closed at 12pm(IST)
-and Automatically openned at 6am(IST) To Prevent Night Spams.
+**Note:** Night Mode chats get Automatically closed at a12pm(IST)
+and Automatically openned at 6am(IST) To Prevent Night Spms.
 """
 
 __mod_name__ = "NIGHT MODE"
