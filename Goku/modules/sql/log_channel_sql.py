@@ -2,7 +2,7 @@ import threading
 
 from sqlalchemy import Column, String, func, distinct
 
-from cinderella.modules.sql import BASE, SESSION
+from Goku.modules.sql import BASE, SESSION
 
 
 class GroupLogs(BASE):
