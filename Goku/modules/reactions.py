@@ -3,8 +3,8 @@ import random
 from telegram import Bot, Update
 from telegram.ext import run_async
 
-from cinderella import dispatcher
-from cinderella.modules.disable import DisableAbleCommandHandler
+from Goku import dispatcher
+from Goku.modules.disable import DisableAbleCommandHandler
 
 
 reactions = [
