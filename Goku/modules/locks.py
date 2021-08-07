@@ -9,13 +9,13 @@ from telegram.error import BadRequest
 from telegram.ext import CommandHandler, MessageHandler, Filters, run_async
 from telegram.utils.helpers import mention_html
 
-import cinderella.modules.sql.locks_sql as sql
-from cinderella import dispatcher, SUDO_USERS, DEV_USERS, LOGGER
-from cinderella.modules.disable import DisableAbleCommandHandler
-from cinderella.modules.helper_funcs.chat_status import can_delete, is_user_admin, user_not_admin, user_admin, bot_can_delete, is_bot_admin, connection_status
-from cinderella.modules.helper_funcs.filters import CustomFilters
-from cinderella.modules.log_channel import loggable
-from cinderella.modules.sql import users_sql
+import Goku.modules.sql.locks_sql as sql
+from Goku import dispatcher, SUDO_USERS, DEV_USERS, LOGGER
+from Goku.modules.disable import DisableAbleCommandHandler
+from Goku.modules.helper_funcs.chat_status import can_delete, is_user_admin, user_not_admin, user_admin, bot_can_delete, is_bot_admin, connection_status
+from Goku.modules.helper_funcs.filters import CustomFilters
+from Goku.modules.log_channel import loggable
+from Goku.modules.sql import users_sql
 
 LOCK_TYPES = {
     'sticker': Filters.sticker,
