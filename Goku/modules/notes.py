@@ -9,12 +9,12 @@ from telegram.ext import CommandHandler, RegexHandler
 from telegram.ext.dispatcher import run_async
 from telegram.utils.helpers import escape_markdown
 
-import cinderella.modules.sql.notes_sql as sql
-from cinderella import dispatcher, MESSAGE_DUMP, LOGGER
-from cinderella.modules.disable import DisableAbleCommandHandler
-from cinderella.modules.helper_funcs.chat_status import user_admin
-from cinderella.modules.helper_funcs.misc import build_keyboard, revert_buttons
-from cinderella.modules.helper_funcs.msg_types import get_note_type
+import Goku.modules.sql.notes_sql as sql
+from Goku import dispatcher, MESSAGE_DUMP, LOGGER
+from Goku.modules.disable import DisableAbleCommandHandler
+from Goku.modules.helper_funcs.chat_status import user_admin
+from Goku.modules.helper_funcs.misc import build_keyboard, revert_buttons
+from Goku.modules.helper_funcs.msg_types import get_note_type
 
 FILE_MATCHER = re.compile(r"^###file_id(!photo)?###:(.*?)(?:\s|$)")
 
