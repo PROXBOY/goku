@@ -10,11 +10,11 @@ from telegram import ParseMode
 from telegram.ext import CommandHandler, run_async, Filters
 from telegram.utils.helpers import escape_markdown, mention_html
                                                                    
-from cinderella import dispatcher, OWNER_ID, SUDO_USERS, SUPPORT_USERS, WHITELIST_USERS, BAN_STICKER
-from cinderella.__main__ import STATS, USER_INFO
-from cinderella.modules.disable import DisableAbleCommandHandler
-from cinderella.modules.helper_funcs.extraction import extract_user
-from cinderella.modules.helper_funcs.filters import CustomFilters
+from Goku import dispatcher, OWNER_ID, SUDO_USERS, SUPPORT_USERS, WHITELIST_USERS, BAN_STICKER
+from Goku.__main__ import STATS, USER_INFO
+from Goku.modules.disable import DisableAbleCommandHandler
+from Goku.modules.helper_funcs.extraction import extract_user
+from Goku.modules.helper_funcs.filters import CustomFilters
 
 from geopy.geocoders import Nominatim
 from telegram import Location
