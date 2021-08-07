@@ -3,7 +3,7 @@ import threading
 
 from sqlalchemy import Column, String, Boolean
 
-from cinderella.modules.sql import SESSION, BASE
+from Goku.modules.sql import SESSION, BASE
 
 
 class Permissions(BASE):
