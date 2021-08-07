@@ -4,10 +4,10 @@ from telegram import Update, Bot, Chat, Message, User
 from telegram.error import BadRequest
 from telegram.ext import CommandHandler, Filters
 from telegram.ext.dispatcher import run_async
-from cinderella.modules.helper_funcs.chat_status import bot_admin
-from cinderella.modules.helper_funcs.filters import CustomFilters
+from Goku.modules.helper_funcs.chat_status import bot_admin
+from Goku.modules.helper_funcs.filters import CustomFilters
 
-from cinderella import dispatcher
+from Goku import dispatcher
 import random, re
 
 @run_async
