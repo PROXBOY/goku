@@ -7,13 +7,13 @@ from telegram import Bot, Update, ParseMode
 from telegram.error import BadRequest
 from telegram.ext import CommandHandler, MessageHandler, Filters, run_async
 
-import cinderella.modules.sql.blacklist_sql as sql
+import Goku.modules.sql.blacklist_sql as sql
 
-from cinderella import dispatcher, LOGGER
-from cinderella.modules.disable import DisableAbleCommandHandler
-from cinderella.modules.helper_funcs.chat_status import user_admin, user_not_admin, connection_status
-from cinderella.modules.helper_funcs.extraction import extract_text
-from cinderella.modules.helper_funcs.misc import split_message
+from Goku import dispatcher, LOGGER
+from Goku.modules.disable import DisableAbleCommandHandler
+from Goku.modules.helper_funcs.chat_status import user_admin, user_not_admin, connection_status
+from Goku.modules.helper_funcs.extraction import extract_text
+from Goku.modules.helper_funcs.misc import split_message
 
 BLACKLIST_GROUP = 11
 
