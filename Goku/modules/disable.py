@@ -6,9 +6,9 @@ from telegram import Bot, Update, ParseMode
 from telegram.ext import CommandHandler, RegexHandler, MessageHandler
 from telegram.utils.helpers import escape_markdown
 
-from cinderella import dispatcher
-from cinderella.modules.helper_funcs.handlers import CMD_STARTERS, CustomCommandHandler
-from cinderella.modules.helper_funcs.misc import is_module_loaded
+from Goku import dispatcher
+from Goku.modules.helper_funcs.handlers import CMD_STARTERS, CustomCommandHandler
+from Goku.modules.helper_funcs.misc import is_module_loaded
 
 FILENAME = __name__.rsplit(".", 1)[-1]
 
@@ -17,8 +17,8 @@ if is_module_loaded(FILENAME):
 
     from telegram.ext.dispatcher import run_async
 
-    from cinderella.modules.helper_funcs.chat_status import user_admin, is_user_admin, connection_status
-    from cinderella.modules.sql import disable_sql as sql
+    from Goku.modules.helper_funcs.chat_status import user_admin, is_user_admin, connection_status
+    from Goku.modules.sql import disable_sql as sql
 
     DISABLE_CMDS = []
     DISABLE_OTHER = []
