@@ -5,10 +5,10 @@ from typing import List
 from telegram import Bot, Update, ParseMode
 from telegram.ext import CommandHandler, MessageHandler, Filters, run_async
 
-from cinderella import ALLOW_EXCL, dispatcher, CustomCommandHandler
-from cinderella.modules.disable import DisableAbleCommandHandler
-from cinderella.modules.helper_funcs.chat_status import user_admin, bot_can_delete, dev_plus, connection_status
-from cinderella.modules.sql import cleaner_sql as sql
+from Goku import ALLOW_EXCL, dispatcher, CustomCommandHandler
+from Goku.modules.disable import DisableAbleCommandHandler
+from Goku.modules.helper_funcs.chat_status import user_admin, bot_can_delete, dev_plus, connection_status
+from Goku.modules.sql import cleaner_sql as sql
 
 if ALLOW_EXCL:
     CMD_STARTERS = ('/', '!')
