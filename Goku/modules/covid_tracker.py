@@ -4,8 +4,8 @@ from urllib.request import urlopen
 from telegram import ParseMode, Update, Bot, Chat
 from telegram.ext import CommandHandler, MessageHandler, BaseFilter, run_async
 
-from cinderella import dispatcher
-from cinderella.modules.disable import DisableAbleCommandHandler
+from Goku import dispatcher
+from Goku.modules.disable import DisableAbleCommandHandler
 from requests import get
 
 def covindia(bot: Bot, update: Update):
