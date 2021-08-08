@@ -9,17 +9,17 @@ from telegram.ext import CommandHandler, MessageHandler, Filters
 from telegram.ext.dispatcher import run_async
 from telegram.utils.helpers import mention_html, mention_markdown
 
-import cinderella.modules.sql.blsticker_sql as sql
-from cinderella import dispatcher, SUDO_USERS, LOGGER, OWNER_ID
-from cinderella.modules.disable import DisableAbleCommandHandler
-from cinderella.modules.helper_funcs.chat_status import can_delete, is_user_admin, user_not_admin, user_admin, \
+import Goku.modules.sql.blsticker_sql as sql
+from Goku import dispatcher, SUDO_USERS, LOGGER, OWNER_ID
+from Goku.modules.disable import DisableAbleCommandHandler
+from Goku.modules.helper_funcs.chat_status import can_delete, is_user_admin, user_not_admin, user_admin, \
 		bot_can_delete, is_bot_admin
-from cinderella.modules.helper_funcs.filters import CustomFilters
-from cinderella.modules.helper_funcs.misc import split_message
-from cinderella.modules.warns import warn
-from cinderella.modules.log_channel import loggable
-from cinderella.modules.sql import users_sql
-from cinderella.modules.connection import connected
+from Goku.modules.helper_funcs.filters import CustomFilters
+from Goku.modules.helper_funcs.misc import split_message
+from Goku.modules.warns import warn
+from Goku.modules.log_channel import loggable
+from Goku.modules.sql import users_sql
+from Goku.modules.connection import connected
 
 from cinderella.modules.helper_funcs.alternate import send_message
 
