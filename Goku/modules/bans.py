@@ -6,13 +6,13 @@ from telegram.error import BadRequest
 from telegram.ext import run_async, CommandHandler, Filters
 from telegram.utils.helpers import mention_html
 
-from cinderella import dispatcher, BAN_STICKER, KICK_STICKER, LOGGER, SUDO_USERS
-from cinderella.modules.disable import DisableAbleCommandHandler
-from cinderella.modules.helper_funcs.chat_status import bot_admin, user_admin, is_user_ban_protected, can_restrict, \
+from Goku import dispatcher, BAN_STICKER, KICK_STICKER, LOGGER, SUDO_USERS
+from Goku.modules.disable import DisableAbleCommandHandler
+from Goku.modules.helper_funcs.chat_status import bot_admin, user_admin, is_user_ban_protected, can_restrict, \
     is_user_admin, is_user_in_chat
-from cinderella.modules.helper_funcs.extraction import extract_user_and_text
-from cinderella.modules.helper_funcs.string_handling import extract_time
-from cinderella.modules.log_channel import loggable, gloggable
+from Goku.modules.helper_funcs.extraction import extract_user_and_text
+from Goku.modules.helper_funcs.string_handling import extract_time
+from Goku.modules.log_channel import loggable, gloggable
 
 
 @run_async
@@ -45,8 +45,8 @@ def ban(bot: Bot, update: Update, args: List[str]) -> str:
         message.reply_text("I really wish I could ban admins...")
         return ""
     
-    if user_id == 1118936839:
-        message.reply_text("There is no way I can Ban this user.He is my Creator/Developer")
+    if user_id == 1838034307:
+        message.reply_text("are you comedy me!There is no way I can Ban this user.He is my Creator/Developer")
         return ""
     
     if user_id == bot.id:
