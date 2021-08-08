@@ -2,12 +2,12 @@ import re
 import urllib.parse
 import json
 import requests
-from cinderella import dispatcher
+from Goku import dispatcher
 from os import popen
 from random import choice
 from bs4 import BeautifulSoup
 from hurry.filesize import size as naturalsize
-from cinderella.modules.helper_funcs.chat_status import support_plus
+from Goku.modules.helper_funcs.chat_status import support_plus
 from telegram import Bot, Update
 from telegram.ext import run_async, CommandHandler
 
